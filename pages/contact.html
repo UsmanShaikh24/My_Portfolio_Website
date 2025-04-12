@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mohammad Usman Shaikh</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .alert {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">Usman's Portfolio</a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-page">
+        <h1>Contact Me</h1>
+        
+        <div class="contact-container">
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 8080955134</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>usman5583@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Pune, MH, 411048</p>
+                    </div>
+                </div>
+                <div class="social-links-large">
+                    <a href="https://www.linkedin.com/in/usman-shaikh-383952231/" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/UsmanShaikh24" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="contact-form">
+                <h2>Send Me a Message</h2>
+                <div id="formAlert" class="alert"></div>
+                <form id="contactForm" action="../php/submit_contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/usman-shaikh-383952231/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/UsmanShaikh24" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Mohammad Usman Shaikh. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

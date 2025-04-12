@@ -1,0 +1,431 @@
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        background-color: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: var(--box-shadow);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .education-item,
+    .experience-item,
+    .skill-card,
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    /* Responsive Table Styles */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Responsive Image Styles */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Contact Form Responsive Styles */
+    .contact-form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    /* Touch-friendly Adjustments */
+    button,
+    .btn,
+    .nav-links a {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.8rem 1.2rem;
+    }
+
+    /* Education Card Responsive Fixes */
+    .education-card {
+        padding: 1.2rem;
+    }
+
+    .education-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .education-header h2 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .education-header .degree {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .education-header .date {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+
+    .course-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .course-tags span {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+        margin: 0;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 640px) {
+    .navbar {
+        padding: 0 1rem;
+        height: 60px;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        padding: 1.5rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 1.2rem;
+        margin: 1.2rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .education-item,
+    .experience-item,
+    .skill-card,
+    .project-card {
+        padding: 1.2rem;
+    }
+
+    /* Enhanced Mobile Form Styles */
+    .contact-form {
+        padding: 0.8rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 0.7rem;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    /* Mobile Grid Adjustments */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Mobile Image Handling */
+    .project-image,
+    .certificate-image {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    /* Education Card Mobile Fixes */
+    .education-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .education-header h2 {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+    }
+
+    .education-header .degree {
+        font-size: 0.95rem;
+    }
+
+    .education-header .date {
+        font-size: 0.85rem;
+    }
+
+    .education-details h3 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .achievements-list li {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
+    .course-tags span {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 380px) {
+    .navbar {
+        height: 55px;
+    }
+
+    .logo a {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        padding: 0.8rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .education-item,
+    .experience-item,
+    .skill-card,
+    .project-card {
+        padding: 1rem;
+    }
+
+    /* Tighter Spacing for Small Screens */
+    .contact-form {
+        padding: 0.6rem;
+    }
+
+    .form-group {
+        margin-bottom: 0.8rem;
+    }
+
+    /* Adjust Button Sizes */
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Stack Grid Items */
+    .grid-container > * {
+        margin-bottom: 1rem;
+    }
+
+    /* Education Card Small Mobile Fixes */
+    .education-card {
+        padding: 0.8rem;
+    }
+
+    .education-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .education-header .degree {
+        font-size: 0.9rem;
+    }
+
+    .education-header .date {
+        font-size: 0.8rem;
+    }
+
+    .achievements-list li {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hamburger,
+    .footer {
+        display: none;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 2cm;
+    }
+} 
